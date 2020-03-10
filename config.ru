@@ -5,6 +5,7 @@ require 'byebug' if ENV['BYEBUG']
 
 get '/:options' do
   options = params[:options].gsub '+', ' '
+  content_type :text
   `stress #{options}`
 end
 
