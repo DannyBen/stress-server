@@ -2,7 +2,7 @@ require 'sinatra'
 require 'byebug' if ENV['BYEBUG']
 
 get '/:options' do
-  options = params[:options]
+  options = params[:options].gsub '+', ' '
   system "stress #{options}"
 end
 
