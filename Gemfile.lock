@@ -24,7 +24,6 @@ PLATFORMS
 DEPENDENCIES
   byebug
   puma
-  rack
   sinatra
 
 BUNDLED WITH

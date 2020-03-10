@@ -23,5 +23,12 @@ $ stress -c 1 -m 1 -t 10
 Use this URL:
 
 ```shell
-$ curl "http://localhost:3000/-c+1+-m+1+-t+10"
+$ curl http://localhost:3000/-c+1+-m+1+-t+10
+```
+
+
+To see all the options, you can run:
+
+```shell
+$ curl http://localhost:3000/--help
 ```

@@ -13,4 +13,6 @@ RUN gem install bundler && \
 
 COPY . .
 
-CMD bundle exec rackup -p 3000 -o 0.0.0.0
+EXPOSE 3000
+
+CMD bundle exec rackup
