@@ -1,5 +1,11 @@
 # Stress Server
 
+[![Build Status](https://github.com/DannyBen/stress-server/workflows/Test/badge.svg)](https://github.com/DannyBen/stress-server/actions?query=workflow%3ATest)
+
+[Source code on GitHub][github] | [Image on DockerHub][dockerhub]
+
+---
+
 This is a docker container with the [`stress`][stress] command line installed, and
 a webserver that can run stress calls with options.
 
@@ -92,3 +98,5 @@ $ docker-compose up web
 
 [stress]: https://linux.die.net/man/1/stress
 [opcode]: https://github.com/dannyben/opcode
+[github]: https://github.com/DannyBen/stress-server
+[dockerhub]: https://hub.docker.com/r/dannyben/stress-server
