@@ -8,9 +8,10 @@ WORKDIR /app
 
 COPY Gemfile* ./
 RUN gem install bundler && \
+    bundle config set without 'development test' && \
     bundle install --jobs=3 --retry=3 
 
-COPY config.ru .
+COPY config.ru server.rb ./
 
 EXPOSE 3000
 

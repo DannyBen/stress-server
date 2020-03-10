@@ -1,0 +1,18 @@
+stress: info: [...] dispatching hogs: 2 cpu, 0 io, 2 vm, 2 hdd
+stress: dbug: [...] using backoff sleep of ...us
+stress: dbug: [...] setting timeout to 10s
+stress: dbug: [...] --> hogcpu worker 2 [...] forked
+stress: dbug: [...] --> hogvm worker 2 [...] forked
+stress: dbug: [...] --> hoghdd worker 2 [...] forked
+stress: dbug: [...] using backoff sleep of ...us
+stress: dbug: [...] setting timeout to 10s
+stress: dbug: [...] --> hogcpu worker 1 [...] forked
+stress: dbug: [...] --> hogvm worker 1 [...] forked
+stress: dbug: [...] --> hoghdd worker 1 [...] forked
+stress: dbug: [...] <-- worker ... returned normally
+stress: dbug: [...] <-- worker ... returned normally
+stress: dbug: [...] <-- worker ... returned normally
+stress: dbug: [...] <-- worker ... returned normally
+stress: dbug: [...] <-- worker ... returned normally
+stress: dbug: [...] <-- worker ... returned normally
+stress: info: [...] successful run completed in 0s
