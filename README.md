@@ -27,6 +27,7 @@ Use one of the endpoints below to run the `stress` command on the server.
 - It is recommended to run all your calls with the `timeout` option set, otherwise, you might need to restart the server in order to stop the `stress` process.
 - **You should not run this server in production environments**.
 
+## Server Endpoints
 
 ### `GET /stress`
 
@@ -45,8 +46,6 @@ $ curl --no-buffer "http://localhost:3000/stress?c=1&m=1&verbose=1&t=10"
 ```
 
 Flags with a hyphen, like `--dry-run` may be expressed with either a hyphen (`dry-run=1`) or an underscore (`dry_run=1`)
-
-
 
 ### `GET /help`
 
