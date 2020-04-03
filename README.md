@@ -75,7 +75,7 @@ $ curl --no-buffer "http://localhost:3000/raw/-c+1+-m+1+--verbose+-t+10"
 
 ## Development
 
-To run the server in the development:
+To run the server in development:
 
 ```
 $ bundle exec rackup -s thin -p 3000 -o 0.0.0.0
