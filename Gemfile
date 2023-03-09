@@ -11,7 +11,7 @@ gem "thin"
 group :development do
   gem 'rack-test'
   gem 'rspec'
-  gem 'rspec_fixtures'
+  gem 'rspec_approvals'
   gem "byebug"
   gem "simplecov"
 end
