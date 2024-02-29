@@ -8,7 +8,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gem 'sinatra', '< 4' 
 gem 'sinatra-contrib'
 gem 'thin'
-gem 'rackup'
+# gem 'rackup' # needed with sinatra 4...
 
 group :development do
   gem 'debug'
