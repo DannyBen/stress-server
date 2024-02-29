@@ -1,4 +1,4 @@
-FROM ruby:2.6.3
+FROM ruby:3.2
 
 RUN apt-get update && apt-get install stress
 

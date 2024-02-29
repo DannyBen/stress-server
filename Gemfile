@@ -4,9 +4,11 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-gem 'sinatra', '>= 4'
+# FIXME: version 4 brings updated rack, which has a problem with thin
+gem 'sinatra', '< 4' 
 gem 'sinatra-contrib'
 gem 'thin'
+gem 'rackup'
 
 group :development do
   gem 'debug'
