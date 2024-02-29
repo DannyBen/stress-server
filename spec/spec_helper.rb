@@ -17,11 +17,10 @@ require File.expand_path '../server', __dir__
 # Bootstrap Sinatra testing with rspec
 module RSpecMixin
   include Rack::Test::Methods
-  def app() Sinatra::Application end
+  def app = Sinatra::Application
 end
 
 # Configure RSpec
 RSpec.configure do |config|
   config.include RSpecMixin
 end
-

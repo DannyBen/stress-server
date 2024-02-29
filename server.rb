@@ -1,6 +1,6 @@
 require 'sinatra'
-require "sinatra/streaming"
-require 'byebug' if ENV['BYEBUG']
+require 'sinatra/streaming'
+require 'debug' if ENV['DEBUGGER']
 
 helpers do
   def stream_command(command)
@@ -10,6 +10,7 @@ helpers do
       IO.popen command do |io|
         io.each do |line|
           break if out.closed?
+
           puts line unless ENV['QUIET_SERVER']
           out << line
         end
@@ -32,7 +33,7 @@ get '/help' do
 end
 
 get '/raw/:options' do
-  options = params[:options].gsub '+', ' '
+  options = params[:options].tr '+', ' '
   stream_command "stress #{options}"
 end
 
@@ -53,9 +54,9 @@ get '/stress' do
   hdd_bytes = params[:'hdd-bytes'] || params[:hdd_bytes]
 
   options = []
-  options.push "--verbose" if verbose
-  options.push "--quiet"   if quiet
-  options.push "--dry-run" if dry_run
+  options.push '--verbose' if verbose
+  options.push '--quiet'   if quiet
+  options.push '--dry-run' if dry_run
   options.push "--timeout #{timeout}" if timeout
   options.push "--backoff #{backoff}" if backoff
   options.push "--cpu #{cpu}" if cpu
@@ -64,11 +65,10 @@ get '/stress' do
   options.push "--vm-bytes #{vm_bytes}" if vm_bytes
   options.push "--vm-stride #{vm_stride}" if vm_stride
   options.push "--vm-hang #{vm_hang}" if vm_hang
-  options.push "--vm-keep" if vm_keep
+  options.push '--vm-keep' if vm_keep
   options.push "--hdd #{hdd}" if hdd
   options.push "--hdd-bytes #{hdd}" if hdd_bytes
 
   options = options.join ' '
   stream_command "stress #{options}"
 end
-
